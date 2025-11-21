@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #0a0a0a;
+  background-color: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #007bff;
+}
+.nav-cta {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 90vh;
+  background-image: url('hero.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.primary-btn {
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  color: #fff;
+}
+.secondary-btn {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  background: #fff;
+}
+.features-section .feature-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.features-section .feature-img img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.features-section .feature-content {
+  flex: 1 1 400px;
+}
+.features-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+.features-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+.features-section ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+.features-section ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00b4d8;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Membership Section */
+.membership-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #e0f7fa 0%, #ffffff 100%);
+  text-align: center;
+}
+.membership-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.membership-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  position: relative;
+}
+
+/* Product photos inside membership cards */
+.membership-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.membership-card.recommended {
+  border: 2px solid #00b4d8;
+  transform: scale(1.02);
+}
+.membership-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #1a202c;
+}
+.membership-card .price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+.membership-card .price span {
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 400;
+}
+.membership-card ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+.membership-card ul li {
+  margin-bottom: 0.6rem;
+  color: #4a5568;
+  position: relative;
+  padding-left: 1.4rem;
+}
+.membership-card ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00b4d8;
+  font-weight: 700;
+}
+.membership-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Ebook Section */
+.ebook-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  background: #fdfbfe;
+}
+.ebook-content {
+  flex: 1 1 400px;
+}
+.ebook-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+.ebook-content p {
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* List styling for the e‑book features */
+.ebook-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  color: #4a5568;
+}
+.ebook-list li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.4rem;
+}
+.ebook-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00b4d8;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.ebook-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.ebook-img img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .features-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+  .ebook-section {
+    flex-direction: column;
+  }
+}

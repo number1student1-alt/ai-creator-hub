@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout – AI Creator Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .checkout-container {
+      padding: 4rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 6rem;
+    }
+    .checkout-container h2 {
+      margin-bottom: 1rem;
+    }
+    .checkout-container p {
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
+    .pay-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(45deg, #00b4d8, #0077b6);
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pay-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="avatar.jpg" alt="Avatar" />
+      <span>AI Creator Hub</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#ebook">E‑Book</a></li>
+    </ul>
+    <a href="index.html#pricing" class="nav-cta">Join Now</a>
+  </nav>
+  <div class="checkout-container">
+    <h2>Secure Checkout</h2>
+    <p>Thank you for choosing the <strong id="plan-name">selected</strong> plan. Payment processing will be integrated here. For now, this is a demo page.</p>
+    <a href="#" class="pay-button">Pay with Stripe (Coming Soon)</a>
+  </div>
+  <script>
+    // Extract plan from query string and display
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan');
+    if (plan) {
+      document.getElementById('plan-name').textContent = plan.charAt(0).toUpperCase() + plan.slice(1) + ' plan';
+    }
+  </script>
+</body>
+</html>
