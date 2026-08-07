@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Cancelled – AI Creator Hub</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .cancel-container {
-      max-width: 600px;
-      margin: 6rem auto;
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .cancel-container h2 {
-      margin-bottom: 1rem;
-      color: #1a202c;
-    }
-    .cancel-container p {
-      margin-bottom: 1.5rem;
-      color: #4a5568;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment didn't go through — AI Creator Hub</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .panel{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);
+         border-radius:var(--radius);box-shadow:var(--shadow);padding:2.5rem 2rem;text-align:center}
+</style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="avatar.jpg" alt="Avatar" />
-      <span>AI Creator Hub</span>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><img src="avatar.jpg" alt=""><span>AI Creator Hub</span></a>
+  <div class="nav__menu"><a href="index.html">Back to site</a></div>
+</nav>
+
+<section class="sec" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="panel">
+      <h1 style="font-size:1.8rem;margin-bottom:.7rem">That payment didn't go through</h1>
+      <p style="margin-bottom:1.8rem">Nothing was charged. This usually means the checkout was closed, or the card was declined — trying a different card fixes it most of the time.</p>
+      <a href="index.html#pricing" class="btn btn--block btn--lg">Try again</a>
+      <p style="margin-top:1.5rem;font-size:.95rem">
+        Still stuck? <a href="mailto:support@example.com">Email me</a> and I'll get you sorted manually.
+      </p>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html#features">Features</a></li>
-      <li><a href="index.html#membership">Membership</a></li>
-      <li><a href="index.html#ebook">E‑Book</a></li>
-    </ul>
-    <a href="index.html#membership" class="nav-cta">Join Now</a>
-  </nav>
-  <div class="cancel-container">
-    <h2>Payment Cancelled</h2>
-    <p>Your payment was cancelled or failed. Please try again or contact support if you need assistance.</p>
-    <a href="index.html#membership" class="btn primary-btn">Return to Membership</a>
-    <p style="margin-top: 1rem;">Still need help? <a href="mailto:support@example.com">Contact support</a>.</p>
   </div>
+</section>
+
+<footer>
+  <div class="wrap foot__legal" style="margin-top:0;border-top:0">
+    <p>© 2026 AI Creator Hub. Payments handled securely by Stripe.</p>
+  </div>
+</footer>
+
 </body>
 </html>
